@@ -46,7 +46,7 @@ def main(wrfin, out_dir):
     _out_dir.mkdir(parents=True, exist_ok=True)
     plot_maps(three_hrly_ds, _out_dir)
 
-    _out_dir = out_dir / "timeseries/img"
+    _out_dir = out_dir / f"timeseries/img/{init_dt.strftime('%Y%m%d%H')}"
     _out_dir.mkdir(parents=True, exist_ok=True)
     print("Creating ts plot...")
     plot_timeseries(hr_ds, _out_dir)

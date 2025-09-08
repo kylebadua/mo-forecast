@@ -307,6 +307,10 @@ def plot_timeseries(ds, out_dir):
         axs[4].legend(loc="upper right", fontsize=24)
         # endregion plot PPV
 
+        if idx == 0:
+            out_file = out_file[:14]
+        else:
+            pass
         out_file = (
             out_dir
             / f"wrf-ts_{station_name.replace(' ', '')}_{init_dt.strftime('%Y-%m-%d_%H')}PHT.png"
