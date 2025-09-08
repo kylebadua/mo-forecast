@@ -308,7 +308,7 @@ def plot_timeseries(ds, out_dir):
         # endregion plot PPV
 
         if idx == 0:
-            out_file = out_file[:14]
+            out_dir = out_dir[:14]
         else:
             pass
         out_file = (
