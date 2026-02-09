@@ -30,8 +30,6 @@ VARS = {
     "wpd": {"varname": "wpd"},
     "ppv": {"varname": "ppv"},
     "ghi": {"varname": "ghi"},
-    "u10": {"varname": "u10"},
-    "v10": {"varname": "v10"},
 }
 
 
