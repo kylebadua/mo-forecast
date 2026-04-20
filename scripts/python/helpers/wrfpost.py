@@ -13,6 +13,8 @@ from helpers.wrf import wrf_getvar
 VARS = {
     "rain": {"varname": "prcp"},
     "temp": {"varname": "T2"},
+    "u_10m": {"varname": "U10"},
+    "v_10m": {"varname": "V10"},
     "tsk": {"varname": "TSK"},
     "hi": {"varname": "hi"},
     "hix": {"varname": "hi"},
