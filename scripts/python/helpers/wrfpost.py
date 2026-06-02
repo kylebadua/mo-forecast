@@ -218,9 +218,10 @@ def save_as_netcdf(ds: xr.Dataset, out_file: Path):
     ds.lat.attrs["long_name"] = "latitude"
 
     # --- HI metadata ---
-    ds["hi"].attrs.update(
-        {"bias_correction": "additive", "bias_correction_value": 4.75}
-    )
+    if "hi" in ds:
+        ds["hi"].attrs.update(
+            {"bias_correction": "additive", "bias_correction_value": 4.75}
+        )
 
     # --- History append ---
     old = ds.attrs.get("history", "")
