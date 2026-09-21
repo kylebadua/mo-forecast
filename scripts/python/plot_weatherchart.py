@@ -265,7 +265,7 @@ def shearline_detection(ds_hr, vimfc_ds):
         lats = points[:, 0]  # Latitude
 
         # Check if the longitude span is at least 5 degrees
-        if lons.max() - lons.min() < 10:
+        if lons.max() - lons.min() < 5:
             continue  # Skip shear lines with longitude length < 5 degrees
 
         # Apply smoothing filters
@@ -458,7 +458,7 @@ def plot_weather_chart(ds, shearline_df, out_dir):
         ts = pd.to_datetime(ds.time.values[0])
         file_prfx = "gfs"
         out_file = (
-            out_dir / f"{file_prfx}-{hour*3}hr_weatherchart_{ts:%Y-%m-%d_%H}PHT.png"
+            out_dir / f"{file_prfx}-{(hour+1)*3}hr_weatherchart_{ts:%Y-%m-%d_%H}PHT.png"
         )
         fig.savefig(out_file, bbox_inches="tight", dpi=200)
 
