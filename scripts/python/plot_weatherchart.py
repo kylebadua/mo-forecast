@@ -458,7 +458,7 @@ def plot_weather_chart(ds, shearline_df, out_dir):
         ts = pd.to_datetime(ds.time.values[0])
         file_prfx = "gfs"
         out_file = (
-            out_dir / f"{file_prfx}-{hour*3}hr_weatherchart_{ts:%Y-%m-%d_%H}PHT.png"
+            out_dir / f"{file_prfx}-{(hour+1)*3}hr_weatherchart_{ts:%Y-%m-%d_%H}PHT.png"
         )
         fig.savefig(out_file, bbox_inches="tight", dpi=200)
 
