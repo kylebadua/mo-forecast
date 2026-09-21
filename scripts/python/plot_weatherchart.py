@@ -265,7 +265,7 @@ def shearline_detection(ds_hr, vimfc_ds):
         lats = points[:, 0]  # Latitude
 
         # Check if the longitude span is at least 5 degrees
-        if lons.max() - lons.min() < 10:
+        if lons.max() - lons.min() < 5:
             continue  # Skip shear lines with longitude length < 5 degrees
 
         # Apply smoothing filters
